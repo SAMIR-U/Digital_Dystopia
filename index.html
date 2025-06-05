@@ -25,23 +25,106 @@
     <section id="principal" class="hero">
         <h1>Bienvenidos a Digital Dystopia</h1>
         <p>La fiesta donde el futuro se encuentra con la oscuridad del neón.</p>
+        <span class="event-date">📅 27 de Julio, 2025</span>
+        <a href="#comprar" class="button">Comprar Tiket</a>
     </section>
 
     <section id="descripcion" class="descripcion">
-        <h2>¿Qué es Digital Dystopia?</h2>
-        <p>Una experiencia inmersiva de música electrónica, luces intensas, y estética cyberpunk.
-            Prepárate para una noche que desafiará tu percepción de la realidad.</p>
+        <div class="descripcion-contenido">
+            <div class="columna-izquierda">
+                <img src="images/music_party.jpg" alt="Digital Dystopia" class="descripcion-imagen">
+            </div>
+            <div class="columna-derecha">
+                <h2>¿Qué es Digital Dystopia?</h2>
+                <div class="descripcion-texto-scroll">
+                    <p>
+                        Digital Dystopia es mucho más que un evento: es una experiencia sensorial total que fusiona
+                        música
+                        electrónica de vanguardia, iluminación envolvente y una estética cyberpunk que te transportará a
+                        un futuro
+                        oscuro y fascinante.
+                        En esta distopía digital, los límites entre lo real y lo virtual se desdibujan. Te espera una
+                        noche donde
+                        los beats retumban como el latido de una ciudad futurista, las luces cortan la oscuridad como
+                        neones en la
+                        niebla, y cada detalle visual está diseñado para sumergirte en una narrativa inmersiva.
+                        Prepárate para una celebración única donde el arte, la tecnología y el caos urbano convergen
+                        para desafiar
+                        tu percepción de la realidad.
+                    </p>
+                </div>
+                <div class="selector-imagenes">
+                    <label>Elige tu vista:</label>
+                    <div class="miniaturas">
+                        <img src="images/music_party.jpg" alt="Vista 3" onclick="cambiarImagen(this)">
+                        <img src="images/concert_party.jpg" alt="Vista 1" onclick="cambiarImagen(this)">
+                        <img src="images/audience_party.jpg" alt="Vista 2" onclick="cambiarImagen(this)">
+                        <img src="images/laserLight_party.jpg" alt="Vista 3" onclick="cambiarImagen(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="artistas" class="artistas">
         <h2>Artistas Invitados</h2>
-        <ul>
-            <li>Neon Ghost</li>
-            <li>Cyberwave</li>
-            <li>Dystopian Dreams</li>
-            <li>Pixel Prophet</li>
-        </ul>
+        <div class="artista-grid">
+            <div class="artista-card">
+                <img src="images/neon_skull.png" alt="Neon Ghost">
+                <h3>Neon Ghost</h3>
+                <p>Sonidos oscuros con toques sintéticos y una vibra retro-futurista que te envuelve.</p>
+                <p class="presentacion">🎧 Presentación: 22:00 hrs</p>
+                <a class="spotify-button" href="https://open.spotify.com/artist/000000" target="_blank">Spotify</a>
+            </div>
+            <div class="artista-card">
+                <img src="images/joker_mask.jpg" alt="Cyberwave">
+                <h3>Cyberwave</h3>
+                <p>Beat pulsante, distorsión digital y melodías desde el corazón de la distopía.</p>
+                <p class="presentacion">🎧 Presentación: 23:30 hrs</p>
+                <a class="spotify-button" href="https://open.spotify.com/artist/000001" target="_blank">Spotify</a>
+            </div>
+            <div class="artista-card">
+                <img src="images/chica_dj.jpg" alt="Dystopian Dreams">
+                <h3>Dystopian Dreams</h3>
+                <p>Una experiencia sonora cinematográfica, cruda y melancólica.</p>
+                <p class="presentacion">🎧 Presentación: 01:00 hrs</p>
+                <a class="spotify-button" href="https://open.spotify.com/artist/000002" target="_blank">Spotify</a>
+            </div>
+            <div class="artista-card">
+                <img src="images/pixel_girl.png" alt="Pixel Prophet">
+                <h3>Pixel Prophet</h3>
+                <p>Exploraciones glitch, mensajes distorsionados del futuro y bajos densos.</p>
+                <p class="presentacion">🎧 Presentación: 02:30 hrs</p>
+                <a class="spotify-button" href="https://open.spotify.com/artist/000003" target="_blank">Spotify</a>
+            </div>
+        </div>
     </section>
+
+
+    <section id="comprar" class="comprar-tiket">
+        <h2>Compra tu Tiket</h2>
+        <form class="tiket-form" action="#" method="post">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cantidad">Cantidad de tikets:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" required>
+
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecciona una opción</option>
+                <option value="general">General</option>
+                <option value="vip">VIP</option>
+                <option value="ultra">Ultra</option>
+            </select>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </section>
+
 
     <footer id="footer">
         <p>© 2025 Digital Dystopia. Todos los derechos reservados.</p>
@@ -64,6 +147,10 @@
                 });
             }
         });
+        function cambiarImagen(img) {
+            const mainImage = document.querySelector('.descripcion-imagen');
+            mainImage.src = img.src;
+        }
     </script>
 </body>
 
