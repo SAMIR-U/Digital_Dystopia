@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: 'Orbitron', sans-serif;
@@ -14,6 +19,12 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Glitch keyframes */
@@ -174,18 +185,19 @@ body {
 section:not(.hero) {
     padding: 100px 20px;
     margin: auto;
-    min-width: 280px;
+    width: 100%;
 }
 
 .descripcion,
 .artistas {
+    width: 100%;
+    max-width: 100%;
     background-color: rgba(50, 30, 70, 0.9);
     margin-top: 40px;
     border: 1px solid #444;
     box-shadow: 0 0 20px #0ff30f40;
     clip-path: polygon(0 0, 98% 0, 100% 10%, 100% 100%, 2% 100%, 0 90%);
     padding: 40px;
-    min-width: 280px;
 }
 
 .descripcion h2,
