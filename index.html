@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Dystopia</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Digital Dystopia</div>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="#principal">Inicio</a></li>
+                <li><a href="#descripcion">Descripción</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="principal" class="hero">
+        <h1>Bienvenidos a Digital Dystopia</h1>
+        <p>La fiesta donde el futuro se encuentra con la oscuridad del neón.</p>
+    </section>
+
+    <section id="descripcion" class="descripcion">
+        <h2>¿Qué es Digital Dystopia?</h2>
+        <p>Una experiencia inmersiva de música electrónica, luces intensas, y estética cyberpunk.
+            Prepárate para una noche que desafiará tu percepción de la realidad.</p>
+    </section>
+
+    <section id="artistas" class="artistas">
+        <h2>Artistas Invitados</h2>
+        <ul>
+            <li>Neon Ghost</li>
+            <li>Cyberwave</li>
+            <li>Dystopian Dreams</li>
+            <li>Pixel Prophet</li>
+        </ul>
+    </section>
+
+    <footer id="footer">
+        <p>© 2025 Digital Dystopia. Todos los derechos reservados.</p>
+        <p>Contacto: info@digitaldystopia.party</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 10);
+            });
+
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.navbar nav');
+
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
