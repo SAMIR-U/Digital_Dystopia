@@ -133,11 +133,11 @@ body {
 }
 
 /* Secciones generales */
-section {
+section:not(.hero) {
     padding: 100px 20px;
     max-width: 800px;
     margin: auto;
-    min-width: 280px; /* Mínimo ancho para pantallas pequeñas */
+    min-width: 280px;
 }
 
 .descripcion,
